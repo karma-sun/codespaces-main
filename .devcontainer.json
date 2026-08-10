@@ -36,8 +36,12 @@
         }
     },
     
+    "remoteEnv": {
+    "TZ": "Asia/Shanghai"
+    },
+
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	 "postCreateCommand": "sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && sudo dpkg-reconfigure -f noninteractive tzdata",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
